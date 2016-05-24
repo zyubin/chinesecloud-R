@@ -1,0 +1,5 @@
+require("RMySQL")
+# require("Rwordseg")
+require("data.table")
+require("stringr")
+require("tm")
