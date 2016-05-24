@@ -18,26 +18,11 @@ WordSegByDate <- function(plat = "sina",table_text = "tb_stock01",localdataget =
 	insertWords(readLines("KeyWords/KeyWords.txt", encoding = "UTF-8"))
 #   插入自定义词库 用于分词 
 
-	# level_words <- readLines("sentiment/level.txt",encoding = "utf8")
-	# negative_emo <- readLines("sentiment/negative_emo.txt")
-	# negative_eva <- readLines("sentiment/negative_eva.txt")
-	# negative_add <- readLines("sentiment/negative_add.txt")
-	# positive_add <- readLines("sentiment/positive_add.txt")
-	# positive_emo <- readLines("sentiment/positive_emo.txt")
-	# positive_eva <- readLines("sentiment/positive_eva.txt")
-	# Notword_add <- readLines("sentiment/Notword_add.txt")
-	# feature_add <- readLines("sentiment/feature.txt")
-	
-	# score_negative <- read.table("words_score/score_negative.txt", header = T, sep = ",")
-	# score_positive <- read.table("words_score/score_positive.txt", header = T, sep = ",")
-	# score_level <- read.table("words_score/score_level.txt", header = T, sep = ",")
-	
-	# setwd(file.path("shop_plat",web_plat))
-	#设置工作空间到每个电商平台
+
 	if(localdataget){
 		SQLdate <- list.files(localdatafolder)
 	}else{
-		con <- dbConnect(MySQL(),user='root', password='root',host='192.168.1.141',dbname='bigdata',port=3306)
+		con <- dbConnect(MySQL(),user='XXXX', password='XXXX',host='XXXX',dbname='bigdata',port=3306)
 		dbSendQuery(con,'set names gbk')
 		SQLQuery <- paste("SELECT DISTINCT post_date FROM ", table_text, sep="")
 		res  <- dbSendQuery(con, SQLQuery)

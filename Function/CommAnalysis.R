@@ -18,7 +18,7 @@ Comm_analysis <- function(comm_cut_j,n_once,dirwd,...){
 	cat("-------", comm_cut_j, " commets Completed",paste(rep("-",12-nchar(comm_cut_j)), collapse = ""),"\n")
 	tryCatch({
 	#### 全部数据
-	con <- dbConnect(MySQL(),user='root', password='tcl_bigdata@321',host='192.168.1.142',dbname='bigdata',port=3306)
+	con <- dbConnect(MySQL(),user='XXXX', password='XXXX',host='XXXX',dbname='bigdata',port=3306)
 	dbSendQuery(con,'set names gbk')
 	SQLQuery <- paste('SELECT id, title FROM tb_dfcf01 LIMIT ', comm_cut_j ," , ", n_once, sep="")
 	res  <- dbSendQuery(con, SQLQuery)
