@@ -20,6 +20,7 @@ insertWords(readLines("KeyWords/KeyWords.txt", encoding = "UTF-8"))
 
 
 
+
 WordSegByDate(plat = "sina",table_text = "tb_stock01",localdataget = TRUE, from_date = "2015-10-10", end_date = "2015-11-10",
 	dirwd = "D:/ntusd/股吧数据分析",localdatafolder = "E:/新浪财经新闻/New/Txt")
 
